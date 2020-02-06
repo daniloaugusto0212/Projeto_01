@@ -1,10 +1,12 @@
+<?php
+    include('config.php');?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <title>Projeto 01</title>
-    <link href="estilo/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link href="<?php echo INCLUDE_PATH; ?>estilo/css/all.css" rel="stylesheet"> <!--load all styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
-    <link href="estilo/style.css" rel="stylesheet"/>
+    <link href="<?php echo INCLUDE_PATH; ?>estilo/style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="palavras-chave,do,meu,site">
     <meta name="description" content="Descrição do meu site">
@@ -17,19 +19,19 @@
             <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->
             <nav class="desktop right">
                 <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>        
             </nav>
             <nav class="mobile right">
-                <div class="botao-menu-mobile"><i class="fas fa-mouse"></i></div>
+                <div class="botao-menu-mobile"><i class="fas fa-arrow-alt-circle-down"></i></div>
                 <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>        
             </nav>
         <div class='clear'></div>
@@ -58,7 +60,7 @@
                 fictício padrão do setor desde os anos 1500 quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de amostras do tipo. Ele sobreviveu não apenas cinco séculos, mas também o salto para a composição eletrônica, permanecendo essencialmente inalterado. Foi popularizado na década de 1960 com o lançamento de folhas de Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoração eletrônica como o Aldus PageMaker, incluindo versões do Lorem Ipsum.</p>
             </div><!--w50 left-->
             <div class="w50 left ">
-                <img class="right" src="images/foto.jpg" alt="foto">
+                <img class="right" src="<?php echo INCLUDE_PATH; ?>images/foto.jpg" alt="foto">
             </div><!--w50 left-->
             <div class="clear"></div>  
         </div><!--center-->      
@@ -126,8 +128,8 @@
             <p>Todo os direitos reservados</p>
         </div><!--center-->
     </footer>
-    <script src="js/jquery.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
 </body>
 </html>
 
