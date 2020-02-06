@@ -14,7 +14,7 @@
 <body> 
     <header>
         <div class="center">
-            <div class="logo left">Logomarca</div><!--logo-->
+            <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->
             <nav class="desktop right">
                 <ul>
                 <li><a href="">Home</a></li>
@@ -24,7 +24,7 @@
                 </ul>        
             </nav>
             <nav class="mobile right">
-                <div class="botao-menu-mobile"><i class="fas fa-bars"></i></div>
+                <div class="botao-menu-mobile"><i class="fas fa-mouse"></i></div>
                 <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Sobre</a></li>
@@ -127,14 +127,7 @@
         </div><!--center-->
     </footer>
     <script src="js/jquery.js"></script>
-    <script>
-        $(function(){
-
-            var mensagem = 'Olá Mundo';
-            console.log(mensagem);
-            alert(mensagem);
-        })
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
 
