@@ -8,7 +8,7 @@
 /**Boot CSS**/
 
 html,body{
-    overflow-x: hidden;
+    height: 100%;
    
 }
 
@@ -51,7 +51,7 @@ img{
 /**Estilização do site **/
 header{
     background: #3D437A;
-    padding: 20px 0;
+    padding: 20px 0;    
 }
 
 header .logo{
@@ -80,11 +80,6 @@ nav.desktop li{
     padding: 0 30px;
     text-transform: uppercase;
     display: inline-block;
-}
-
-nav.desktop a{
-    color: white;
-    text-decoration: none;
 }
 
 nav.desktop a{
@@ -272,6 +267,7 @@ footer p{
     font-weight: 400;
     font-size: 16px;
 }
+
 
 section.erro-404 h2{        
     text-align: center;

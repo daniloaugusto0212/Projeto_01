@@ -17,8 +17,8 @@
     <?php
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
         switch ($url) {
-            case 'sobre':
-                echo '<target target="sobre"  />';
+            case 'depoimentos':
+                echo '<target target="depoimentos"  />';
                 break;
 
             case 'servicos':
@@ -33,7 +33,7 @@
             <nav class="desktop right">
                 <ul>
                 <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>        
@@ -42,7 +42,7 @@
                 <div class="botao-menu-mobile"><i class="fas fa-arrow-alt-circle-down"></i></div>
                 <ul>
                 <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>        
@@ -57,7 +57,7 @@
         if (file_exists('pages/'.$url.'.php')) {
             include('pages/'.$url.'.php');
         }else{
-            if ($url != 'sobre' && $url != 'servicos') {
+            if ($url != 'depoimentos' && $url != 'servicos') {
                 //Podemos fazer o que quiser, pois a página não existe
                 $pagina404 = true;
                 include('pages/404.php');
