@@ -307,10 +307,10 @@ section.erro-404 a{
 
 #map{
     width: 100%;
-    height: 400px;
+    height: 180px;
 }
 
-.contato-container{
+.contato-container{    
     padding: 40px 0;
     text-align: center;
 }
@@ -327,6 +327,7 @@ section.erro-404 a{
 }
 
 .contato-container textarea{
+    padding: 8px;
     margin: 8px 0;
     width: 100%;
     height: 120px;
@@ -334,7 +335,15 @@ section.erro-404 a{
     padding-left: 8px;
     font-size: 16px;
     max-width: 500px;
+    resize: vertical;
     color: #444;
+}
+.contato-container input[type=submit]{
+    background: #00C59E;
+    width: 140px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
 }
 
 
