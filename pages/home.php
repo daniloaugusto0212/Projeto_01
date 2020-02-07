@@ -47,6 +47,21 @@
             <h4>JavaScript</h4>
             <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo </p>
         </div><!--box-especialidade-->
+        <div class="w33 left box-especialidade">
+            <h3><i class="fab fa-css3-alt"></i></h3>
+            <h4>CSS3</h4>
+            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo </p>
+        </div><!--box-especialidade-->
+        <div class="w33 left box-especialidade">
+            <h3><i class="fab fa-html5"></i></h3>
+            <h4>HTML5</h4>
+            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo </p>
+        </div><!--box-especialidade-->
+        <div class="w33 left box-especialidade">
+            <h3><i class="fab fa-js"></i></h3>
+            <h4>JavaScript</h4>
+            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo </p>
+        </div><!--box-especialidade-->
         <div class="clear" ></div>
     </div><!--center--> 
 </section><!--especialidades-->

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;    
     font-family: "Open Sans";
+    
 }
 
 /**Boot CSS**/
@@ -51,7 +52,8 @@ img{
 /**Estilização do site **/
 header{
     background: #3D437A;
-    padding: 20px 0;    
+    padding: 20px 0; 
+     
 }
 
 header .logo{

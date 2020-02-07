@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="palavras-chave,do,meu,site">
     <meta name="description" content="Descrição do meu site">
+    <link rel="icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico" type="image/x-icon"/>    
     <meta charset="UTF-8">   
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
 </head>
@@ -36,6 +37,7 @@
                 <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
                 <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH; ?>outro-menu">Outro menu</a></li>
                 </ul>        
             </nav>
             <nav class="mobile right">
@@ -45,6 +47,7 @@
                 <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
                 <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH; ?>outro-menu">Outro menu</a></li>
                 </ul>        
             </nav>
         <div class='clear'></div>
@@ -75,6 +78,8 @@
         </div><!--center-->
     </footer >
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/constants.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzasyDHPNqxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
     <?php
         if ($url == 'home' || $url == '') {
@@ -85,9 +90,9 @@
     <?php
         if($url == 'contato'){
     ?>
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzasyDHPNqxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
-    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
     <?php }?>
+    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
+    
 </body>
 </html>
 
