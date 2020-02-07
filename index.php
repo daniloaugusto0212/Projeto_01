@@ -1,4 +1,4 @@
-<?php include('config.php');?>
+<?php include('config.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -45,7 +45,7 @@
         if (file_exists('pages/'.$url.'.php')) {
             include('pages/'.$url.'.php');
         }else{
-            //Podemos fazer o que quiser, pois a págian não existe
+            //Podemos fazer o que quiser, pois a página não existe
             $pagina404 = true;
             include('pages/404.php');
         }
