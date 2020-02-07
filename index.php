@@ -28,6 +28,8 @@
         }
 
     ?>
+
+    <?php new Email(); ?>
     <header>
         <div class="center">
             <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->
@@ -36,8 +38,7 @@
                 <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
-                <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH; ?>outro-menu">Outro menu</a></li>
+                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>                
                 </ul>        
             </nav>
             <nav class="mobile right">
@@ -46,8 +47,7 @@
                 <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
-                <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH; ?>outro-menu">Outro menu</a></li>
+                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>                
                 </ul>        
             </nav>
         <div class='clear'></div>

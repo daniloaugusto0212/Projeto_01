@@ -1,9 +1,12 @@
 <?php
 
-    //Localhost Linux
-   // define('INCLUDE_PATH','http://localhost/CursoFullStack/Projeto_01/');
+   $autoload = function($class){
+        include('classes'.$class.'.php');
+   };
 
-    //Localhost Windows
+   spl_autoload_register($autoload);
+
+    //Localhost 
     define('INCLUDE_PATH','http://localhost/Projeto_01/');
 
 
