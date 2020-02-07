@@ -76,6 +76,12 @@
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
     <?php
+        if ($url == 'home' || $url == '') {
+            
+    ?>
+    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
+        <?php } ?>
+    <?php
         if($url == 'contato'){
     ?>
     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzasyDHPNqxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
