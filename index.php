@@ -51,11 +51,11 @@
         }
    ?>
 
-    <footer>
+    <footer <?php if(isset($pagina404) && $pagina404 == true) echo 'class="fixed"';?>>
         <div class="center">
             <p>Todo os direitos reservados</p>
         </div><!--center-->
-    </footer <?php if(isset($pagina404) && $pagina404 == true) echo 'class="fixed"';?>>
+    </footer >
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
 </body>
