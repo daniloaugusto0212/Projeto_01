@@ -46,6 +46,7 @@
             include('pages/'.$url.'.php');
         }else{
             //Podemos fazer o que quiser, pois a págian não existe
+            $pagina404 = true;
             include('pages/404.php');
         }
    ?>
@@ -54,7 +55,7 @@
         <div class="center">
             <p>Todo os direitos reservados</p>
         </div><!--center-->
-    </footer>
+    </footer <?php if(isset($pagina404) && $pagina404 == true) echo 'class="fixed"';?>>
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
 </body>
