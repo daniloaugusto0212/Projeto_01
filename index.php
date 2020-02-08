@@ -14,6 +14,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
 </head>
 <body> 
+        <?php
+            if(isset($_POST['acao'])){
+                //Enviei o formulário.
+                if($_POST['email'] != ''){
+                    $email = $_POST['email'];
+                    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        //Tudo certo, é um email, só enviar
+                        $mail = new Email('imap.ig.com.br','dansol@ig.com.br','*****','Danilo');
+                        $mail->addAdress('magrao_dan@gmail.com','DanSol');
+                        $info = ['assunto'=>'Um novo e-mail cadastrado no site!','corpo'=>$email];
+                        $mail->formatarEmail($info);
+                        if ($mail->enviarEmail()) {
+                            echo '<script>alert("Enviado com sucesso!")</script>';
+                        }else{
+                            echo '<script>alert("Algo deu errado!")</script>';
+                        }
+                    }else{
+                        echo '<script>alert("Não é um e-mail válido!")</script>';
+                    }
+                }else{
+                    echo '<script>alert("Campos vazios não são permitidos!")</script>';
+                }
+            }
+        ?>
 <base base="<?php echo INCLUDE_PATH; ?>" />
     <?php
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
@@ -29,7 +53,7 @@
 
     ?>
 
-    <?php new Email(); ?>
+    
     <header>
         <div class="center">
             <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->

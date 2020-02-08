@@ -1,7 +1,11 @@
 <?php
 
    $autoload = function($class){
-        include('classes'.$class.'.php');
+        if($class == 'Email'){
+          include('classes/phpmailer/PHPMailerAutoload.php');  
+        }
+        include('classes/'.$class.'.php');
+        
    };
 
    spl_autoload_register($autoload);
