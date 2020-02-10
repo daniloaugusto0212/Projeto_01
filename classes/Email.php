@@ -4,9 +4,9 @@
     {
         private $mailer;
 
-        public function __construct($host, $username,$senha,$name)
+        public function __construct($host,$username,$senha,$name)
         {
-            $this->mailer = new PHPMailer(true);           
+            $this->mailer = new PHPMailer;           
             
             $this->mailer->isSMTP();                                            // Send using SMTP
             $this->mailer->Host       = $host;                    // Set the SMTP server to send through
