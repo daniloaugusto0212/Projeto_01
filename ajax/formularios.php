@@ -8,7 +8,7 @@
         $corpo.="<hr>";
     }
     $info = array('assunto'=>$assunto,'corpo'=>$corpo);
-    $mail = new Email('smtp.live.com','daniloaugusto0212@hotmail.com','dan221602','Danilo');
+    $mail = new Email('smtp.live.com','daniloaugusto0212@hotmail.com','*****','Danilo');
     $mail->addAdress('daniloaugusto0212@hotmail.com','DanSol');                
     $mail->formatarEmail($info);
     if ($mail->enviarEmail()) { 
