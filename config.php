@@ -18,7 +18,7 @@
     define('HOST','localhost');
     define('USER','root');
     define('PASSWORD','681015');
-    define('DATABASE','Pojeto_01');
+    define('DATABASE','Projeto_01');
 
 
     //Servidor 000webostapp
@@ -29,6 +29,6 @@
     define('HOST','localhost');
     define('USER','root');
     define('PASSWORD','681015');
-    define('DATABASE','Pojeto_01');*/
+    define('DATABASE','Projeto_01');*/
 
 ?>
