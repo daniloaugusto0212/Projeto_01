@@ -15,14 +15,14 @@
 </head>
 <body> 
         <?php
-            if(isset($_POST['acao'])){
+            if(isset($_POST['acao']) && ($_POST['identificador'] == 'form_home')){
                 //Enviei o formulário.
                 if($_POST['email'] != ''){
                     $email = $_POST['email'];
                     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                         //Tudo certo, é um email, só enviar
-                        $mail = new Email('smtp.ig.com.br','dansol@ig.com.br','dan221602','Danilo');
-                        $mail->addAdress('magrao.dan@gmail.com','DanSol');
+                        $mail = new Email('smtp.live.com','daniloaugusto0212@hotmail.com','*****','Danilo');
+                        $mail->addAdress('daniloaugusto0212@hotmail.com','DanSol');
                         $corpo = "E-mail cadastrado na home do site!:<hr>$email";
                         $info = ['assunto'=>'Um novo e-mail cadastrado no site!','corpo'=>$email];
                         $mail->formatarEmail($info);
@@ -37,6 +37,27 @@
                 }else{
                     echo '<script>alert("Campos vazios não são permitidos!")</script>';
                 }
+            }else if(isset($_POST['acao']) && $_POST['identificador'] == 'form_contato'){
+                /*
+                $nome = $_POST['nome'];
+                $email = $_POST['email'];
+                $mensagem = $_POST['mensagem'];
+                $telefone = $_POST['telefone'];*/
+                $assunto = 'Nova mensagem do site.';
+                $corpo = '';
+                foreach ($_POST as $key => $value) {
+                    $corpo.=ucfirst($key).": ".$value;
+                    $corpo.="<hr>";
+                }
+                $info = array('assunto'=>$assunto,'corpo'=>$corpo);
+                $mail = new Email('smtp.live.com','daniloaugusto0212@hotmail.com','*****','Danilo');
+                $mail->addAdress('daniloaugusto0212@hotmail.com','DanSol');                
+                $mail->formatarEmail($info);
+                if ($mail->enviarEmail()) { 
+                    echo '<script>alert("Enviado com sucesso!")</script>';
+                }else{
+                    echo '<script>alert("Algo deu errado!")</script>';
+                }            
             }
         ?>
 <base base="<?php echo INCLUDE_PATH; ?>" />
