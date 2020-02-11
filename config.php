@@ -1,5 +1,6 @@
 <?php
 
+    session_start();
    $autoload = function($class){
         if($class == 'Email'){
           include_once('classes/phpmailer/PHPMailerAutoload.php');  
@@ -16,5 +17,7 @@
 
     //Servidor 000webostapp
     //define('INCLUDE_PATH','http://daniloaugustocv.000webhostapp.com/Projeto_01/');
+
+    define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
 
 ?>
