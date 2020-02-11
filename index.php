@@ -13,53 +13,7 @@
     <meta charset="UTF-8">   
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
 </head>
-<body> 
-        <?php
-            if(isset($_POST['acao']) && ($_POST['identificador'] == 'form_home')){
-                //Enviei o formulário.
-                if($_POST['email'] != ''){
-                    $email = $_POST['email'];
-                    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-                        //Tudo certo, é um email, só enviar
-                        $mail = new Email('smtp.live.com','daniloaugusto0212@hotmail.com','*****','Danilo');
-                        $mail->addAdress('daniloaugusto0212@hotmail.com','DanSol');
-                        $corpo = "E-mail cadastrado na home do site!:<hr>$email";
-                        $info = ['assunto'=>'Um novo e-mail cadastrado no site!','corpo'=>$email];
-                        $mail->formatarEmail($info);
-                        if ($mail->enviarEmail()) {
-                            echo '<script>alert("Enviado com sucesso!")</script>';
-                        }else{
-                            echo '<script>alert("Algo deu errado!")</script>';
-                        }
-                    }else{
-                        echo '<script>alert("Não é um e-mail válido!")</script>';
-                    }
-                }else{
-                    echo '<script>alert("Campos vazios não são permitidos!")</script>';
-                }
-            }else if(isset($_POST['acao']) && $_POST['identificador'] == 'form_contato'){
-                /*
-                $nome = $_POST['nome'];
-                $email = $_POST['email'];
-                $mensagem = $_POST['mensagem'];
-                $telefone = $_POST['telefone'];*/
-                $assunto = 'Nova mensagem do site.';
-                $corpo = '';
-                foreach ($_POST as $key => $value) {
-                    $corpo.=ucfirst($key).": ".$value;
-                    $corpo.="<hr>";
-                }
-                $info = array('assunto'=>$assunto,'corpo'=>$corpo);
-                $mail = new Email('smtp.live.com','daniloaugusto0212@hotmail.com','*****','Danilo');
-                $mail->addAdress('daniloaugusto0212@hotmail.com','DanSol');                
-                $mail->formatarEmail($info);
-                if ($mail->enviarEmail()) { 
-                    echo '<script>alert("Enviado com sucesso!")</script>';
-                }else{
-                    echo '<script>alert("Algo deu errado!")</script>';
-                }            
-            }
-        ?>
+<body>         
 <base base="<?php echo INCLUDE_PATH; ?>" />
     <?php
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
@@ -74,8 +28,10 @@
         }
 
     ?>
-
-    
+    <div class="sucesso">Formulário enviado com sucesso!</div><!--sucesso-->
+    <div class="overlay-loading">
+        <img src="<?php echo INCLUDE PATH; ?>images/ajax-loader.gif" />
+        </div> <!--overlay-loading-->   
     <header>
         <div class="center">
             <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->
@@ -138,6 +94,7 @@
     ?>
     <?php }?>
     <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/formularios.js"></script>
     
 </body>
 </html>
