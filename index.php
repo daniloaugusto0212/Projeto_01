@@ -30,8 +30,8 @@
     ?>
     <div class="sucesso">Formulário enviado com sucesso!</div><!--sucesso-->
     <div class="overlay-loading">
-        <img src="<?php echo INCLUDE PATH; ?>images/ajax-loader.gif" />
-        </div> <!--overlay-loading-->   
+        <img src="<?php echo INCLUDE PATH ?>images/ajax-loader.gif" />
+        </div> <!--overlay-loading-->              
     <header>
         <div class="center">
             <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->
@@ -40,7 +40,7 @@
                 <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>                
+                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>        
             </nav>
             <nav class="mobile right">
@@ -69,8 +69,7 @@
             }else{
                 include('pages/home.php');
             }    
-        }
-            
+        }           
    ?>
    </div><!--container-principal-->          
 

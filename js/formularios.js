@@ -3,7 +3,7 @@ $(function(){
         var form = $(this);
             $.ajax({
                 beforeSend:function(){
-                    $('overlay-loading').fadeIn();
+                    $('.overlay-loading').fadeIn();
                 },
                 url:include_path+'ajax/formularios.php',
                 method:'post',
@@ -11,13 +11,13 @@ $(function(){
                 data:form.serialize()
         }).done(function(data){
             if(data.sucesso){
-                $('overlay-loading').fadeOut();
+                $('.overlay-loading').fadeOut();
                 $('.sucesso').fadeIn();
                 setTimeout(function(){
                     $('.sucesso').fadeOut();
-                },3000)
+                },4000)
             }else{
-                $('overlay-loading').fadeIn();
+                $('.overlay-loading').fadeIn();
             }
         });
         return false;
