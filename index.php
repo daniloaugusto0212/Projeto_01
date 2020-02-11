@@ -21,8 +21,9 @@
                     $email = $_POST['email'];
                     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                         //Tudo certo, é um email, só enviar
-                        $mail = new Email('smtp.ig.com.br','dansol@ig.com.br','*****','Danilo');
-                        $mail->addAdress('magrao_dan@gmail.com','DanSol');
+                        $mail = new Email('smtp.ig.com.br','dansol@ig.com.br','dan221602','Danilo');
+                        $mail->addAdress('magrao.dan@gmail.com','DanSol');
+                        $corpo = "E-mail cadastrado na home do site!:<hr>$email";
                         $info = ['assunto'=>'Um novo e-mail cadastrado no site!','corpo'=>$email];
                         $mail->formatarEmail($info);
                         if ($mail->enviarEmail()) {

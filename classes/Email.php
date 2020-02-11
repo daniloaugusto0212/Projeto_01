@@ -17,7 +17,8 @@
             $this->mailer->Port       = 587;                                   // TCP port to connect to        
             
             $this->mailer->setFrom($username,$name);          
-            $this->mailer->isHTML(true);                                  // Set email format to HTML           
+            $this->mailer->isHTML(true);                                  // Set email format to HTML  
+            $this->mailer->CharSet = 'UTF-8';         
                 
         }
     
