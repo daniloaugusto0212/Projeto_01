@@ -30,7 +30,7 @@
     ?>
     <div class="sucesso">Formulário enviado com sucesso!</div><!--sucesso-->
     <div class="overlay-loading">
-        <img src="<?php echo INCLUDE PATH ?>images/ajax-loader.gif" />
+        <img src="<?php echo INCLUDE_PATH ?>images/ajax-loader.gif" />
         </div> <!--overlay-loading-->              
     <header>
         <div class="center">
