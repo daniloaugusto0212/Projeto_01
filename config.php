@@ -17,8 +17,10 @@
     //Conectar com o banco de dados
     define('HOST','localhost');
     define('USER','root');
-    define('PASSWORD','');
+    define('PASSWORD','681015');
     define('DATABASE','Projeto_01');
+
+    
 
 
     //Servidor 000webostapp
@@ -30,6 +32,9 @@
     define('USER','id11864505_admin');
     define('PASSWORD','681015');
     define('DATABASE','id11864505_adminusuarios');*/
+
+    //Contantes para painel de controle
+    define ('NOME_EMPRESA','Dansol');
 
 
     //Funcções

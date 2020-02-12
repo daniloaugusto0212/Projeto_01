@@ -93,6 +93,7 @@ header{
 }
 
 .logout a{
+    padding: 0 20px;
     color: white;
     font-size: 20px;
     text-decoration: none;
@@ -233,13 +234,13 @@ div.box-usuario{
 
 .box-content{    
     background: white;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
 }
 
 .box-content h2{
     font-weight: 300;
-    font-size: 10px;
+    font-size: 23px;
 }
 
 
@@ -251,16 +252,20 @@ div.box-usuario{
     padding: 0 15px;
 }
 
-.box-metricas-single{
+.box-metrica-single{
     float: left;
     position: relative;
-    width: 33,3%;
+    width: 33.3%;
     background: #f4b03e;
     border: 5px solid white;
 }
 
-.box-metricas .box-metricas-single:nth-of-type(2){
+.box-metricas .box-metrica-single:nth-of-type(2){
     background: #e05c4e;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(3){
+    background: #04a65a;
 }
 
 .box-metrica-wraper{
@@ -278,16 +283,30 @@ div.box-usuario{
     font-size: 26px;
 }
 
-@media screen and (max-width:1200px){
-    .box-metricas-single{        
-        height:100px;
-    }
+/*Tabela responsiva*/
+
+.table-responsive{    
+    max-width: 1280px;
+    margin:20px auto;
+}
+.table-responsive .row:nth-of-type(1){
+    font-weight: bold;    
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.table-responsive .row{    
+    color: #777;    
+    padding: 8px 0;
+}
+.col{
+    float: left;
+    width: 50%;
 }
 
 @media screen and (max-width:1024px){
-    .box-metricas-single{
+    .box-metrica-single{        
         width: 100%;
-        height: auto;
     }
 }
 
@@ -317,6 +336,7 @@ div.box-usuario{
         width: 100%;
     }
 }
+
 
 @media screen and (max-width:400px){
     .menu-wraper{
