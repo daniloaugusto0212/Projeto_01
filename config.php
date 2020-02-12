@@ -31,4 +31,16 @@
     define('PASSWORD','681015');
     define('DATABASE','Projeto_01');*/
 
+
+    //Funcções
+
+    function pegaCargo($cargo){
+      $arr = [
+        '0' => 'Normal',
+        '1' => 'Sub Administrador',
+        '2' => 'Administrador'];
+
+        return $arr[$cargo];
+
+    }
 ?>

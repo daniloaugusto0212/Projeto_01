@@ -75,14 +75,6 @@ html,body{
 
 .center{padding: 0 2%;margin:0 auto;}
 
-div.menu{
-    overflow-y: auto;
-    height: 100%;
-    background:#1e698f;
-    float: left;
-    width: 300px;
-
-}
 
 header{
     float: left;
@@ -97,5 +89,61 @@ header{
 
 .logout a{
     color: white;
-    font-size: 25px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.logout span{
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.menu-btn{
+    float: left;
+    cursor: pointer;
+    font-size: 23px;
+    color: white;
+}
+
+div.menu{
+    overflow-y: auto;
+    height: 100%;
+    padding: 10px;
+    background:#1e698f;
+    float: left;
+    width: 300px;
+}
+
+div.box-usuario{
+    text-align: center;
+}
+
+.avatar-usuario{
+    text-align: left;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border:3px solid rgb(48, 156, 199);
+}
+
+.avatar-usuario i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); /*Para funcionar no IE*/
+    font-size: 50px;    
+    color:rgb(48, 156, 199);
+}
+
+.nome-usuario{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nome-usuario p{
+    color: white;    
+    font-size: 15px;
+    font-weight: normal;
 }

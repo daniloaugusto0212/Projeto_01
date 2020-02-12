@@ -16,14 +16,31 @@
 </head>
 <body>
 <div class="menu">
-    <?php
-    
-    ?>
-</div>
+    <div class="box-usuario">
+        <?php
+            if($_SESSION['img'] == ''){              
+        ?>
+            <div class="avatar-usuario">
+                <i class="fa fa-user"></i>
+            </div><!--avatar-usuario-->
+        <?php }else{ ?>
+            <div class="imagem-usuario">
+            <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $_SESSION['img'];?>">
+        <?php } ?>
+        </div><!--imagem-usuario-->
+            <div class="nome-usuario">
+                <p><?php echo $_SESSION['nome']; ?></p>
+                <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
+            </div><!--nome-usuario-->        
+    </div><!--box-usuario-->
+</div><!--menu-->
 <header>
     <div class="center">
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div><!--menu-btn-->
         <div class="logout">
-            <a href="<?php echo INCLUDE_PATH_PAINEL ?>?logout"><i class="fas fa-sign-out-alt"></i></a>
+            <a href="<?php echo INCLUDE_PATH_PAINEL ?>?logout"><span>Sair </span>  <i class="fas fa-sign-out-alt"></i></a>
         </div><!--logout-->
         <div class="clear"></div><!--clear-->
     </div><!--center-->
