@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    date_default_timezone_set('America/Sao_Paulo');
    $autoload = function($class){
         if($class == 'Email'){
           include_once('classes/phpmailer/PHPMailerAutoload.php');  
@@ -17,8 +18,8 @@
     //Conectar com o banco de dados
     define('HOST','localhost');
     define('USER','root');
-    define('PASSWORD','681015');
-    define('DATABASE','Projeto_01');
+    define('PASSWORD','');
+    define('DATABASE','projeto_01');
 
     
 
