@@ -290,14 +290,18 @@ div.box-usuario{
     margin:20px auto;
 }
 .table-responsive .row:nth-of-type(1){
+    color: white;
     font-weight: bold;    
     border-bottom: 1px solid #ccc;
+    background-color: #309cc7;
+    
     
 }
 
+
 .table-responsive .row{    
     color: #777;    
-    padding: 8px 0;
+    padding: 8px 10px;
 }
 .col{
     float: left;

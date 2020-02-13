@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 12-Fev-2020 às 13:36
+-- Tempo de geração: 13-Fev-2020 às 15:36
 -- Versão do servidor: 10.4.10-MariaDB
 -- versão do PHP: 7.3.12
 
@@ -33,8 +33,16 @@ CREATE TABLE IF NOT EXISTS `tb_admin.online` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ip` varchar(255) NOT NULL,
   `ultima_acao` datetime NOT NULL,
+  `token` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tb_admin.online`
+--
+
+INSERT INTO `tb_admin.online` (`id`, `ip`, `ultima_acao`, `token`) VALUES
+(9, '::1', '2020-02-13 12:33:00', '5e44b2e568ba5');
 
 -- --------------------------------------------------------
 
