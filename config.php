@@ -34,6 +34,8 @@
     define('PASSWORD','681015');
     define('DATABASE','id11864505_adminusuarios');*/
 
+    define('BASE_DIR_PAINEL',__DIR__.'/painel');
+
     //Contantes para painel de controle
     define ('NOME_EMPRESA','Dansol');
 
