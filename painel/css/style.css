@@ -371,6 +371,14 @@ div.box-usuario{
     color: white; 
 }
 
+.menu-active{
+    background: rgb(33, 127, 165);
+}
+
+.menu-active::before{
+    content: '>> ';
+}
+
 @media screen and (max-width:1024px){
     .box-metrica-single{        
         width: 100%;
