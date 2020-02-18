@@ -1,4 +1,4 @@
-<?php
+<?php  
 
     session_start();
     date_default_timezone_set('America/Sao_Paulo');
@@ -39,16 +39,13 @@
     //Contantes para painel de controle
     define ('NOME_EMPRESA','Dansol');
 
+    
+    
 
     //Funções do painel
-
-    function pegaCargo($cargo){
-      $arr = [
-        '0' => 'Normal',
-        '1' => 'Sub Administrador',
-        '2' => 'Administrador'];
-
-        return $arr[$cargo];
+    function pegaCargo($indice){
+      
+        return Painel::$cargos[$indice];
 
     }
 

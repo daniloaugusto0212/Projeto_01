@@ -10,6 +10,9 @@
                 return false;
             }
         }
+        public static function userExists($user){
+            
+        }
     }
 
 
