@@ -33,11 +33,11 @@
                     </div><!--box-metrica-wraper-->
                 </div><!--box-metrica-single-->
             </div><!--box-metricas-->
-
+            <div class="clear"></div>
     </div><!--box-content-->
 
     <div class="box-content w100">
-    <h2><i class="fa fa-globe-asia"></i> Usuários Online</h2>
+    <h2><i class="fa fa-globe-asia"></i> Usuários Online do Site</h2>
     <div class="table-responsive">
         <div class="row">
             <div class="col">
@@ -59,6 +59,39 @@
             </div><!--col-->
             <div class="col">
                 <span><?php echo date('d/m/Y H:m:s',strtotime($value['ultima_acao']))?></span>
+            </div><!--col-->
+            <div class="clear"></div>
+        </div><!--row-->
+        <?php } ?>
+    </div><!--table-responsive-->
+    </div><!--box-content-->
+
+    <div class="box-content w100">
+    <h2><i class="fa fa-user-friends"></i> Usuários do Painel</h2>
+    <div class="table-responsive">
+        <div class="row">
+            <div class="col">
+                <span>Nome</span>
+            </div><!--col-->
+            <div class="col">
+                <span>Cargo</span>
+            </div><!--col-->
+            <div class="clear"></div>
+        </div><!--row-->
+
+        <?php
+            $usuariosPainel = MySql::conectar()->prepare("SELECT * FROM `tb_admin.usuarios`");
+            $usuariosPainel->execute();
+            $usuariosPainel = $usuariosPainel->fetchAll();  
+            foreach($usuariosPainel as $key => $value){ 
+            
+        ?>
+        <div class="row">
+            <div class="col">
+                <span><?php echo $value['user'] ?></span>
+            </div><!--col-->
+            <div class="col">
+                <span><?php echo pegaCargo($value['cargo']); ?></span>
             </div><!--col-->
             <div class="clear"></div>
         </div><!--row-->

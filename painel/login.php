@@ -27,6 +27,9 @@
                     $_SESSION['cargo'] = $info['cargo'];
                     $_SESSION['nome'] = $info['nome'];
                     $_SESSION['img'] =$info['img'];
+                    if (isset($_POST['lembrar'])) {
+                        setcookie('lembrar',true,time()+(60*60*24));
+                    }
                     header('Location: '.INCLUDE_PATH_PAINEL);
                     die();
                 }else{
@@ -39,7 +42,15 @@
         <form method="post">
             <input type="text" name="user" placeholder="Login..." required>
             <input type="password" name="password" placeholder="Senha..." required>
-            <input type="submit" name="acao" value="Logar">
+            <div class="form-group-login left">
+                <input type="submit" name="acao" value="Logar!">  
+            </div><!--form-group-login-->
+
+            <div class="form-group-login right">
+                <label>Lembrar-me</label>
+                <input type="checkbox" name="lembrar"/>      
+            </div><!--form-group-login-->
+            
         </form>
 
     </div><!--box-login-->
