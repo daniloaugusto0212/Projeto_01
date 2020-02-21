@@ -81,6 +81,32 @@
             @unlink('uploads/'.$file);
         }
 
+        public static function insert(){
+            $certo = true;
+            $nome_tabela = $arr['nome_tabela'];
+            $query = "INSERT INTO `$nome_tabela` VALUES (null";
+            foreach ($arr as $key => $value) {
+                $nome_coluna = $key;
+                $valor = $value;
+                if ($nome == 'acao' || $nome == $nome_tabela) {
+                    continue;
+                }
+                if ($value == '') {
+                    $certo = false;
+                    break;
+                }
+                $query.=",?";
+                $parametros[] = $value;
+            }
+
+            $query.=")";
+            if($certo == true){
+                $sql = MySql::conectar()->prepare($query);
+                $sql->execute($parametros);
+            }
+            return $certo;
+        }
+        
 
     }
     

@@ -18,8 +18,8 @@
     //Conectar com o banco de dados
     define('HOST','localhost');
     define('USER','root');
-    define('PASSWORD','');
-    define('DATABASE','projeto_01');
+    define('PASSWORD','681015');
+    define('DATABASE','Projeto_01');
 
     
 
