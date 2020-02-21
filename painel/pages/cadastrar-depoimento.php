@@ -1,9 +1,8 @@
 
 <div class="box-content">
-    <h2><i class="fas fa-pen"></i> Cadastrar Depoimentos</h2>
+    <h2><i class="fas fa-file-alt"></i> Adicionar Depoimentos</h2>
 
-    <form  method="post" enctype="multipart/form-data"> <!--enctype="multipart/form-data" para funcionar o upload de imagens-->
-
+    <form  method="post" > 
         <?php
             if (isset($_POST['acao'])) {
                 if(Painel::insert($_POST)){
@@ -23,6 +22,11 @@
         <div class="form-group">
             <label>Depoimento: </label>
             <textarea name="depoimento"></textarea>
+        </div><!--form-group-->
+
+        <div class="form-group">
+            <label>Data: </label>
+            <input type="text" name="data">
         </div><!--form-group-->
 
        
