@@ -35,4 +35,4 @@
             <input type="submit" name="acao" value="Cadastrar!">
         </div><!--form-group-->
     </form>
-</div><!--box-conten-->
+</div><!--box-content-->
