@@ -245,7 +245,13 @@ div.box-usuario{
 
 /*Tabelas*/
 
+.wraper-table{
+    overflow-x: auto;
+}
+
 table{
+    font-weight: 300;
+    min-width: 900px;
     margin: 20px 0;
     width: 100%;
     border-collapse: collapse; /*retira o espaçamento padrão*/
@@ -273,14 +279,28 @@ table a.btn{
 
 }
 
-a.btn.edit{
-    background: #f4b03e;
+a.btn.edit{background: #f4b03e;}
+a.btn.delete{background: #E05C4E;}
+
+/*Paginação*/
+
+.paginacao{
+    text-align: center;
+    margin: 20px 0;
+
 }
 
-a.btn.delete{
-    background: #E05C4E;
+.paginacao a{
+    font-size: 14px;
+    margin: 0 8px;
+    display: inline-block;
+    padding: 3px 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #666;
 }
 
+.paginacao a.page-selected{background: rgb(220,220,220);}
 
 
 /*Box Metricas*/

@@ -17,9 +17,17 @@ input{
     border: 0;
 }
 
+.logo.left img{    
+    width: 60%;
+    max-width: 500px;
+    margin: -17px
+    
+}
+
 img{
     width: 100%;
     max-width: 500px;
+    
 }
 
 .center{
