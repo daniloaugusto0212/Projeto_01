@@ -3,12 +3,12 @@
         $id = (int)$_GET['id'];
         $depoimento = Painel::select('tb_site.depoimentos','id = ?',array($id));
     }else{
-        Painel::alert('erro',' Você precisa passar o parametro ID.');
+        Painel::alert('erro','Você precisa passar o parametro ID.');
         die();
     }
  ?>
 <div class="box-content">
-    <h2><i class="fa fa-pen"></i> Editar Depoimento</h2>
+    <h2><i class="fa fa-pencil"></i> Editar Depoimento</h2>
  
     <form method="post" enctype="multipart/form-data">
  
@@ -18,7 +18,7 @@
                     Painel::alert('sucesso','O depoimento foi editado com sucesso!');
                     $depoimento = Painel::select('tb_site.depoimentos','id = ?',array($id));
                 }else{
-                    Painel::alert('erro','Campos vazios não são permitidos.');
+                    Painel::alert('erro','Campos vázios não são permitidos.');
                 }
             }
         ?>

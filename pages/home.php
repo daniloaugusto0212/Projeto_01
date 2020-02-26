@@ -75,9 +75,14 @@
             <h2 class="title">Serviços</h2>
             <div class="servicos">
             <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed the eiusmod tempor incidid ut labore et dolore magna aliqua. Isso significa que, no mínimo, veniam, exigiu o exercício da nossa vontade, não é por isso que é excomodado. velit esse cillum dolore eu fugi nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culp qui officia deserunt mollit anim id est laborum. </li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed the eiusmod tempor incidid ut labore et dolore magna aliqua. Isso significa que, no mínimo, veniam, exigiu o exercício da nossa vontade, não é por isso que é excomodado. velit esse cillum dolore eu fugi nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culp qui officia deserunt mollit anim id est laborum. </li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed the eiusmod tempor incidid ut labore et dolore magna aliqua. Isso significa que, no mínimo, veniam, exigiu o exercício da nossa vontade, não é por isso que é excomodado. velit esse cillum dolore eu fugi nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culp qui officia deserunt mollit anim id est laborum. </li>
+                <?php 
+                    $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.servicos` ORDER BY order_id ASC LIMIT 3");
+                    $sql->execute();
+                    $servicos = $sql->fetchAll();
+                    foreach($servicos as $key => $value){
+                ?>
+                <li><?php echo $value['servico']; ?></li>
+                    <?php } ?>
             </ul>
             </div><!--servicos-->
             </div><!--depoimento-single-->
