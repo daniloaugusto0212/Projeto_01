@@ -17,11 +17,8 @@
 <section class="descricao-autor">
     <div class="center" >
         <div class="w50 left ">
-            <h2>Danilo A. Pacheco</h2>
-            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de amostras do tipo. Ele sobreviveu não apenas cinco sé
-            fictício padrão do setor desde os anos 1500culos, mas também o salto para a composição eletrônica, permanecendo essencialmente inalterado. Foi popularizado na década de 1960 com o lançamento de folhas de Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoração eletrônica como o Aldus PageMaker, incluindo versões do Lorem Ipsum.</p>
-            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500,
-            fictício padrão do setor desde os anos 1500 quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de amostras do tipo. Ele sobreviveu não apenas cinco séculos, mas também o salto para a composição eletrônica, permanecendo essencialmente inalterado. Foi popularizado na década de 1960 com o lançamento de folhas de Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoração eletrônica como o Aldus PageMaker, incluindo versões do Lorem Ipsum.</p>
+            <h2><?php echo $infoSite['nome_autor']; ?></h2>
+            <p><?php echo $infoSite['descricao']; ?></p>
         </div><!--w50 left-->
         <div class="w50 left ">
             <img class="right" src="<?php echo INCLUDE_PATH; ?>images/foto.jpg" alt="foto">
@@ -34,19 +31,19 @@
     <div class="center">
         <h2 class="title">Especialidades</h2>
         <div class="w33 left box-especialidade">
-            <h3><i class="fab fa-css3-alt"></i></h3>
-            <h4>CSS3</h4>
-            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo </p>
+            <h3><i class="<?php echo $infoSite['icone1']; ?>"></i></h3>
+            <h4><?php echo $infoSite['titulo1']; ?></h4>
+            <p><?php echo $infoSite['descricao1']; ?> </p>
         </div><!--box-especialidade-->        
         <div class="w33 left box-especialidade">
-            <h3><i class="fab fa-html5"></i></h3>
-            <h4>HTML5</h4>
-            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo </p>
+            <h3><i class="<?php echo $infoSite['icone2']; ?>"></i></h3>
+            <h4><?php echo $infoSite['titulo2']; ?></h4>
+            <p><?php echo $infoSite['descricao2']; ?> </p>
         </div><!--box-especialidade-->
         <div class="w33 left box-especialidade">
-            <h3><i class="fab fa-js"></i></h3>
-            <h4>JavaScript</h4>
-            <p>Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo </p>
+            <h3><i class="<?php echo $infoSite['icone3']; ?>"></i></h3>
+            <h4><?php echo $infoSite['titulo3']; ?></h4>
+            <p><?php echo $infoSite['descricao3']; ?></p>
         </div><!--box-especialidade-->
         <div class="clear" ></div>
     </div><!--center--> 

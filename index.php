@@ -1,10 +1,15 @@
 <?php include('config.php'); ?>
 <?php Site::updateUsuarioOnline(); ?>
 <?php Site::contador(); ?>
+<?php
+    $infoSite = MySql::conectar()->prepare("SELECT * FROM `tb_site.config`");
+    $infoSite->execute();
+    $infoSite = $infoSite->fetch();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Projeto 01</title>
+    <title><?php echo $infoSite['titulo']; ?></title>
     <link href="<?php echo INCLUDE_PATH; ?>estilo/css/all.css" rel="stylesheet"> <!--load all styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
     <link href="<?php echo INCLUDE_PATH; ?>estilo/style.css" rel="stylesheet"/>
@@ -94,7 +99,7 @@
         if($url == 'contato'){
     ?>
     <?php }?>
-    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
+    <!--<script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>--> <!--script para carregar especialidades uma a uma-->
     <script src="<?php echo INCLUDE_PATH; ?>js/formularios.js"></script>
     
 </body>
