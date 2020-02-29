@@ -11,8 +11,9 @@ $(function(){
                 data:form.serialize()
         }).done(function(data){
             if(data.sucesso){
+                //Melhorando a interface
                 $('.overlay-loading').fadeOut();
-                $('.sucesso').fadeIn();
+                $('.sucesso').slideToggle();
                 setTimeout(function(){
                     $('.sucesso').fadeOut();
                 },4000)
