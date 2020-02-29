@@ -17,7 +17,7 @@
 					Painel::alert('erro','A imagem de capa precisa ser selecionada.');
 				}else{
 					if(Painel::imagemValida($capa)){
-						$verifica = MySql::conectar()->prepare("SELECT * FROM `tb_site.noticias` WHERE titulo=? AND $categoria_id = ?");
+						$verifica = MySql::conectar()->prepare("SELECT * FROM `tb_site.noticias` WHERE titulo=? AND categoria_id = ?");
 						$verifica->execute(array($titulo,$categoria_id));
 						if($verifica->rowCount() == 0){
 						$imagem = Painel::uploadFile($capa);

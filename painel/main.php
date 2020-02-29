@@ -52,7 +52,7 @@
         <a <?php selecionadoMenu('cadastrar-categorias'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-categorias">Cadastrar Categorias</a>
         <a <?php selecionadoMenu('gerenciar-categorias'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>gerenciar-categorias">Gerenciar Categorias</a>
         <a <?php selecionadoMenu('cadastrar-noticia'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-noticia">Cadastrar Notícias</a>
-        <a <?php selecionadoMenu('cadastrar-depoimento'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-depoimento">Gerenciar Notícias</a>
+        <a <?php selecionadoMenu('gerenciar-noticias'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>gerenciar-noticias">Gerenciar Notícias</a>
     </div><!--items-menu-->
     </div><!--menu-wraper-->
 </div><!--menu-->
@@ -80,6 +80,12 @@
 <script src="<?php echo INCLUDE_PATH ?>js/jquery.js"></script> 
 <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/jquery.mask.js"></script>  
 <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/main.js"></script>
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({
+    selector:".tinymce",
+    plugins: "image",
+    height:300
+    });</script>
 </body>
 </html>
 

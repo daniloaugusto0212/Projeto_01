@@ -19,21 +19,21 @@
     define('HOST','localhost');
     define('USER','root');
     define('PASSWORD','');
-    define('DATABASE','projeto_01');
+    define('DATABASE','Projeto_01');
 
     
 
-
-    //Servidor 000webostapp
-   /* define('INCLUDE_PATH','http://daniloaugustocv.000webhostapp.com/Projeto_01/');
+/*
+    //Servidor hostinger
+   define('INCLUDE_PATH','http://projeto.dansol.com.br/');
 
     define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
     //Conectar com o banco de dados
     define('HOST','localhost');
-    define('USER','id11864505_admin');
+    define('USER','u155647215_danilo');
     define('PASSWORD','681015');
-    define('DATABASE','id11864505_adminusuarios');*/
-
+    define('DATABASE','u155647215_projeto_01');
+*/
     define('BASE_DIR_PAINEL',__DIR__.'/painel');
 
     //Contantes para painel de controle
