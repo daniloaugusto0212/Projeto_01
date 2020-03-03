@@ -37,6 +37,32 @@
                     </div><!--autor-box-portal-->
             </div><!--box-content-sidebar-->
         </div><!--sidebar-->
+
+        <div class="conteudo-portal">
+            <div class="header-conteudo-portal">
+               <!-- <h2>Visualizando todos os Posts</h2> -->
+                <h2>Visualizando Posts em <span>Esportes</span></h2>
+            </div><!--header-conteudo-portal-->
+            <?php
+                for ($i=0; $i < 5; $i++) { 
+                                   
+            ?>
+            <div class="box-single-conteudo">
+                <h2>19/09/2009 - Conheça os eleitos para ga...</h2>
+                <p>É um fato estabelecido há muito tempo que um leitor se distrai com o conteúdo legível de uma página ao examinar seu layout. O objetivo de usar Lorem Ipsum é que ele tem uma distribuição de letras mais ou menos normal, em vez de usar 'Conteúdo aqui, conteúdo aqui', fazendo com que pareça um inglês legível. Muitos pacotes de editoração eletrônica e editores de páginas da web agora usam Lorem Ipsum como texto padrão do modelo, e uma pesquisa por 'lorem ipsum' descobrirá muitos sites ainda na infância. Várias versões evoluíram ao longo dos anos, às vezes por acidente, às vezes de propósito (humor injetado e similares).</p>
+                <a href="<php echo INCLUDE_PATH; ?>esportes/nome-do-post">Leia mais</a>
+            </div><!--box-single-conteudo-->
+            <?php } ?>
+
+            <div class="paginator">
+                <a class="active-page" href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+            </div><!--paginator-->
+        </div><!--conteudo-portal-->
+
+        <div class="clear"></div>
     </div><!--center-->
-    <div class="clear"></div>
+    
 </section>
