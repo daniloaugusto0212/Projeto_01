@@ -1,3 +1,8 @@
+<?php
+    $url = explode('/',$_GET['url']);
+    if (!isset($url[2])) 
+        {    
+?>
 <section class="header-noticias">
     <div class="center">
         <h2 ><i class="far fa-bell"></i></h2>
@@ -50,7 +55,7 @@
             <div class="box-single-conteudo">
                 <h2>19/09/2009 - Conheça os eleitos para ga...</h2>
                 <p>É um fato estabelecido há muito tempo que um leitor se distrai com o conteúdo legível de uma página ao examinar seu layout. O objetivo de usar Lorem Ipsum é que ele tem uma distribuição de letras mais ou menos normal, em vez de usar 'Conteúdo aqui, conteúdo aqui', fazendo com que pareça um inglês legível. Muitos pacotes de editoração eletrônica e editores de páginas da web agora usam Lorem Ipsum como texto padrão do modelo, e uma pesquisa por 'lorem ipsum' descobrirá muitos sites ainda na infância. Várias versões evoluíram ao longo dos anos, às vezes por acidente, às vezes de propósito (humor injetado e similares).</p>
-                <a href="<php echo INCLUDE_PATH; ?>esportes/nome-do-post">Leia mais</a>
+                <a href="<?php echo INCLUDE_PATH; ?>noticias/esportes/nome-do-post">Leia mais</a>
             </div><!--box-single-conteudo-->
             <?php } ?>
 
@@ -65,4 +70,11 @@
         <div class="clear"></div>
     </div><!--center-->
     
-</section>
+</section><!--container-portal-->
+
+<?php }else{ 
+    include('noticia_single.php');
+    
+}
+    ?>
+
