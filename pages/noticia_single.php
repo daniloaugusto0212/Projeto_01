@@ -2,7 +2,7 @@
 <section class="noticia-single">
     <div class="center">
     <header>
-    <h1>Título da minha notícia</h1>
+    <h1><i class="fa fa-calendar"></i> 04/03/2020 - Título da minha notícia</h1>
     </header>
     <article>        
         <h3>Título em h3</h3>

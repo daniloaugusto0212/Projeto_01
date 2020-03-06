@@ -30,7 +30,7 @@
                         Painel::deleteFile($imagem_atual);
                         $imagem = Painel::uploadFile($imagem);
                         $slug = Painel::generateSlug($nome);
-                        $arr = ['titulo'=>$nome,'conteudo'=>$conteudo,'capa'=>$imagem,'slug'=>$slug, 'id'=>$id, 'nome_tabela'=>'tb_site.noticias'];
+                        $arr = ['titulo'=>$nome,'data'=>date('Y-m-d'),'conteudo'=>$conteudo,'capa'=>$imagem,'slug'=>$slug, 'id'=>$id, 'nome_tabela'=>'tb_site.noticias'];
                         Painel::update($arr);
                         $noticia = Painel::select('tb_site.noticias','id = ?',array($id));
                         Painel::alert('sucesso',' A noticia foi editada junto com a imagem!');

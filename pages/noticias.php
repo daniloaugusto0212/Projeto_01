@@ -16,17 +16,24 @@
             <div class="box-content-sidebar">
                 <h3><i class="fa fa-search"></i> Realizar uma busca:</h3>
                 <form>
-                    <input type="text" name="busca" placeholder="O que deseja procurar?" required>
-                    <input type="submit" name="acao" value="Pesquisar!">
+                    <input type="text" name="parametro" placeholder="O que deseja procurar?" required>
+                    <input type="submit" name="buscar" value="Pesquisar!">
                 </form>
             </div><!--box-content-sidebar-->
 
             <div class="box-content-sidebar">
                 <h3><i class="fa fa-list"></i> Selecione a categoria:</h3>
                 <form>
-                   <select name="categoria" id="">
-                       <option value="esportes">Esportes</option>
-                       <option value="esportes">Geral</option>
+                   <select name="categoria">
+                        <?php
+                            $categorias = MySql::conectar()->prepare("SELECT * FROM `tb_site.categorias` ORDER BY order_id ASC");
+                            $categorias->execute();
+                            $categorias = $categorias->fetchAll();
+                            foreach ($categorias as $key => $value) {
+                        ?>
+                            
+                       <option value="<?php echo $value['slug'] ?>"><?php echo $value['nome']; ?></option>
+                       <?php } ?>
                    </select>                    
                 </form>
             </div><!--box-content-sidebar-->
@@ -36,8 +43,13 @@
                     <div class="autor-box-portal">
                         <div class="box-img-autor"></div>
                         <div class="texto-autor-portal text-center">
-                            <h3>Danilo Augusto</h3>
-                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, .</p>
+                        <?php
+                            $infoSite = MySql::conectar()->prepare("SELECT * FROM `tb_site.config`");
+                            $infoSite->execute();
+                            $infoSite = $infoSite->fetch();
+                            ?>
+                            <h3><?php echo $infoSite['nome_autor'] ?></h3>
+                            <p><?php echo substr($infoSite['descricao'],0,300).'...' ?></p><!--colocar link leia mais para a descrição do autor na Home-->
                         </div><!--texto-autor-portal-->
                     </div><!--autor-box-portal-->
             </div><!--box-content-sidebar-->

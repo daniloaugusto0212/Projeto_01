@@ -30,7 +30,7 @@
         } 
 
         public static function contador(){
-           // setcookie('visita','true',time() - 1 ); //Limpar cookie manualmente
+           //setcookie('visita','true',time() - 1 ); //Limpar cookie manualmente
             if (!isset($_COOKIE['visita'])) {
                 setcookie('visita','true',time() + (60*60*24*7)); //Cookie expira em 7 dias
                 $sql = MySql::conectar()->prepare("INSERT INTO `tb_admin.visitas` VALUES (null,?,?)");
