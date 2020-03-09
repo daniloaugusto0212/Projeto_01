@@ -96,12 +96,26 @@
     <script src="<?php echo INCLUDE_PATH; ?>js/constants.js"></script>
     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzasyDHPNqxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
-    <?php
-        if ($url == 'home' || $url == '') {
-            
-    ?>
+  
     <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
-        <?php } ?>
+
+    <?php
+        if(strstr($url,'noticias') !== false){
+
+        ?>
+            <script>
+                $(function(){
+                    $('select').change(function(){
+                        location.href=include_path+"noticias/"+$(this).val();
+                    })
+                })
+            </script>
+
+        <?php
+            }
+        ?>
+
+        
     <?php
         if($url == 'contato'){
     ?>
