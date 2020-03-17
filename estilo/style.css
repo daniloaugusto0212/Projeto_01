@@ -8,6 +8,11 @@
 
 /**Boot CSS**/
 
+input{
+    border-radius: 0;
+    appearance: none;
+}
+
 html,body{
     height: 100%;
    
@@ -20,7 +25,7 @@ input{
 .logo.left img{    
     width: 60%;
     max-width: 500px;
-    margin: -17px
+    margin: -17px;
     
 }
 
@@ -104,7 +109,9 @@ header{
 header .logo{
     font-size: 25px;
     font-weight: 300;
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    padding-left: 20px;
+     
 }
 
 .logo a{
@@ -626,10 +633,7 @@ section.noticia-single article{
     margin-top: 15px;
 }
 
-section.noticia-single h3,
-section.noticia-single h2{
-    margin: 10px 0;
-}
+
 
 section.noticia-single p{
     margin: 10px 0;

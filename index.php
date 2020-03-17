@@ -14,8 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap" rel="stylesheet">
     <link href="<?php echo INCLUDE_PATH; ?>estilo/style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="palavras-chave,do,meu,site">
-    <meta name="description" content="Descrição do meu site">
+    <meta name="author" content="Danilo Augusto" >
+    <meta name="keywords" content="criação de sites, desenvolvimento web,design responsivo"> <!--palavras chaves do site, colocar até 10-->
+    <meta name="description" content="Site desenvolvido no curso de desenvolvimento FullStack Danki Code.">
     <link rel="icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico" type="image/x-icon"/>    
     <meta charset="UTF-8">   
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
@@ -44,22 +45,22 @@
             <div class="logo left"><a href="/" ><img src="images/logo_sitedan.png" width="150px%" alt=""></a></div><!--logo-->
             <nav class="desktop right">
                 <ul>
-                <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>noticias">Notícias</a></li>
-                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                <li><a title="Home" href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                <li><a title="Depoimentos" href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
+                <li><a title="Serviços" href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                <li><a title="Notícias" href="<?php echo INCLUDE_PATH; ?>noticias">Notícias</a></li>
+                <li><a title="Contato" realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>        
             </nav>
             <nav class="mobile right">
                 <div class="botao-menu-mobile"><i class="fas fa-arrow-alt-circle-down"></i></div>
                 <ul>
-                <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                <li><a href="<?php echo INCLUDE_PATH; ?>noticias">Notícias</a></li>
-                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>                
-                </ul>        
+                <li><a title="Home" href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                <li><a title="Depoimentos" href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
+                <li><a title="Serviços" href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                <li><a title="Notícias" href="<?php echo INCLUDE_PATH; ?>noticias">Notícias</a></li>
+                <li><a title="Contato" realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                </ul>     
             </nav>
         <div class='clear'></div>
         </div><!--center-->

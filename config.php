@@ -11,7 +11,7 @@
    };
 
    spl_autoload_register($autoload);
-
+/*
     //Localhost 
     define('INCLUDE_PATH','http://localhost/Projeto_01/');
     define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
@@ -20,10 +20,11 @@
     define('USER','root');
     define('PASSWORD','');
     define('DATABASE','Projeto_01');
-
+    
+*/
     
 
-/*
+
     //Servidor hostinger
    define('INCLUDE_PATH','http://projeto.dansol.com.br/');
 
@@ -33,7 +34,7 @@
     define('USER','u155647215_danilo');
     define('PASSWORD','681015');
     define('DATABASE','u155647215_projeto_01');
-*/
+
     define('BASE_DIR_PAINEL',__DIR__.'/painel');
 
     //Contantes para painel de controle
