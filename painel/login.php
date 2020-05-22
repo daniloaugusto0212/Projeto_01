@@ -12,8 +12,8 @@
             $_SESSION['cargo'] = $info['cargo'];
             $_SESSION['nome'] = $info['nome'];
             $_SESSION['img'] =$info['img'];
-            header('Location: '.INCLUDE_PATH_PAINEL);
-            die();
+            Painel::redirect(INCLUDE_PATH_PAINEL);
+            
         }
     }
 
@@ -52,8 +52,7 @@
                         setcookie('user',$user,time()+(60*60*24),'/');
                         setcookie('password',$password,time()+(60*60*24),'/');
                     }
-                    header('Location: '.INCLUDE_PATH_PAINEL);
-                    die();
+                    Painel::redirect(INCLUDE_PATH_PAINEL);                    
                 }else{
                     //Falhou
                     echo '<div class="erro-box"><i class="fa fa-times"></i> Usuário ou senha incorretos!</div>';

@@ -8,8 +8,8 @@
         $corpo.="<hr>";
     }
     $info = array('assunto'=>$assunto,'corpo'=>$corpo);
-    $mail = new Email('smtp.live.com','daniloaugusto0212@hotmail.com','dan221602','Danilo');
-    $mail->addAdress('daniloaugusto0212@hotmail.com','DanSol');                
+    $mail = new Email('smtp.hostinger.com.br','contato@sitedan.com.br','681015','Projeto');
+    $mail->addAdress('contato@sitedan.com.br','Notícias Now');             
     $mail->formatarEmail($info);
     if ($mail->enviarEmail()) { 
         $data['sucesso'] = true;

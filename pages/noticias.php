@@ -1,5 +1,6 @@
 <?php
 	$url = explode('/',$_GET['url']);
+	
 	if(!isset($url[2]))
 	{
 	$categoria = MySql::conectar()->prepare("SELECT * FROM `tb_site.categorias` WHERE slug = ?");

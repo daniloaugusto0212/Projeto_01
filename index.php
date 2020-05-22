@@ -39,7 +39,7 @@
     <div class="sucesso">Formulário enviado com sucesso!</div><!--sucesso-->
     <div class="overlay-loading">
         <img src="<?php echo INCLUDE_PATH ?>images/ajax-loader.gif" />
-        </div> <!--overlay-loading-->              
+    </div> <!--overlay-loading-->              
     <header>
         <div class="center">            
             <div class="logo left"><a href="/" ><img src="images/logo_sitedan.png" width="150px%" alt=""></a></div><!--logo-->
