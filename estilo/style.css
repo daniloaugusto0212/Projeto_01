@@ -706,6 +706,12 @@ h2.postar-comentario{
     border: 1px solid #ccc;
 }
 
+.box-coment-noticia-resposta{
+    margin:10px 0;
+    padding:20px;
+    border: 1px solid #ccc;
+}
+
 @media screen and (max-width: 768px){
 
     .conteudo-portal{

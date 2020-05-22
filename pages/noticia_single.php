@@ -27,6 +27,7 @@
 		<article>
 			<?php echo $post['conteudo']; ?>
 		</article>
+
 		<?php
 		if (Painel::logado() == false) {
 		?>
@@ -61,32 +62,60 @@
 			</form>
 			<br>
 			<h2 class="postar-comentario">Comentários existentes <i class="fa fa-comment" ></i></h2>
-			
-			<?php
-			$comentarios = MySql::conectar()->prepare("SELECT * FROM `tb_site.comentarios` WHERE noticia_id = ? ORDER BY id DESC");
-			$comentarios->execute(array($post['id']));
-			$comentarios = $comentarios->fetchAll();
-			foreach ($comentarios as $key => $value) {
-				/*TODO Criar tb_resposta_comentarios:
-			id \ comentario_id \ nome \ resposta
-*/		
 
-			?>
+			<?php
+				if (isset($_POST['resposta_comentario'])) {
+					$nome = $_POST['nome'];
+					$resposta = $_POST['resposta'];
+					$comentario = $_POST['comentario_id'];
+					$noticia_id = $_POST['noticia_id'];
+					if ($nome == $_SESSION['nome']) {
+						$sql = MySql::conectar()->prepare("INSERT INTO `tb_site.comentarios_resposta` VALUES(null,?,?,?,?)");
+						$sql->execute(array($nome,$resposta,$comentario,$noticia_id));
+						echo '<script>alert("Resposta realizado com sucesso!")</script>';
+					}else{
+						echo '<script>alert("Resposta não enviado, o nome precisa ser o mesmo do Login!")</script>';
+					}
+					
+				}
+				?>
+
+				<?php
+					$comentarios = MySql::conectar()->prepare("SELECT * FROM `tb_site.comentarios` WHERE noticia_id = ? ORDER BY id DESC");
+					$comentarios->execute(array($post['id']));
+					$comentarios = $comentarios->fetchAll();
+					foreach ($comentarios as $key => $value) {
+					
+					?>
 			<div class="box-coment-noticia">
 				<h3><?php echo $value['nome']; ?></h3>
 				<p><?php echo $value['comentario']; ?></p>
-				<form  method="post">
-				
-					<input type="text" name="nome" value="<?php echo $_SESSION['nome'] ?>">
-					<textarea name="mensagem"  placeholder="Responder..."></textarea>
-					<input type="hidden" name="comentario_id" value="<?php echo $value['id'] ?>">
-					<input type="submit" name="resposta_comentario" value="Responder!">
-				</form>
+
+			<?php
+				$respostas = MySql::conectar()->prepare("SELECT * FROM `tb_site.comentarios_resposta` WHERE noticia_id = ? AND comentario_id = ? ORDER BY id DESC");
+				$respostas->execute(array($post['id'],$value['id']));
+				$respostas = $respostas->fetchAll();
+				foreach ($respostas as $key => $value) {
+			
+			?>
+			<div class="box-coment-noticia-resposta">
+				<h3><?php echo $value['nome']; ?></h3>
+				<p><?php echo $value['resposta']; ?></p>				
 			
 			</div>
 			<?php } ?>
-		<?php } ?>		
-	
+
+				<form  method="post">				
+					<input type="text" name="nome" value="<?php echo $_SESSION['nome'] ?>">
+					<textarea name="resposta"  placeholder="Responder..."></textarea>
+					<input type="hidden" name="comentario_id" value="<?php echo $value['id'] ?>">
+					<input type="hidden" name="noticia_id" value="<?php echo $post['id'] ?>">
+					<input type="submit" name="resposta_comentario" value="Responder!">
+				</form>			
+			
+			<?php } ?>
+			
+		<?php } ?>	
 	</div>
 </section>
 
